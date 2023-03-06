@@ -1,0 +1,548 @@
+@import "../../index.less";
+// 通用less样式书写的地方
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input,
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+
+body {
+  background: transparent;
+}
+#app {
+  .searchButton {
+    background: url("../../assets/images/common/searchButton.png") no-repeat;
+    background-size: 100% 100%;
+    border: 0 none;
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 0;
+    color: #fff;
+    &:hover {
+      background-color: unset;
+    }
+  }
+  .uploadTemplate {
+    width: 120px;
+  }
+  .ivu-tabs-nav .ivu-tabs-tab {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+  }
+
+  .ivu-tabs-tab-active {
+    color: rgba(53, 255, 250, 1) !important;
+  }
+
+  .ivu-tabs-nav .ivu-tabs-tab:hover {
+    color: rgba(53, 255, 250, 1);
+  }
+
+  .ivu-tabs-ink-bar {
+    background-color: rgba(53, 255, 250, 1) !important;
+  }
+
+  .ivu-tabs-bar {
+    margin-bottom: 0;
+    padding: 14px 0 15px 0;
+    border-bottom: 2px solid #164170;
+    background: rgba(93, 166, 222, 0.12);
+  }
+
+  .ivu-tabs-content {
+    height: calc(~"100% - 60px");
+  }
+
+  .ivu-tabs-nav {
+    margin-left: 26px;
+  }
+  .ivu-layout {
+    background: rgba(0, 0, 0, 0);
+    height: 100%;
+  }
+  /*表格样式*/
+  .ivu-table-wrapper {
+    border: 0 none;
+    .ivu-table-body {
+      height: calc(~"100% - 62px");
+      overflow: auto;
+    }
+    .ivu-table {
+      background: none;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+      &:after {
+        content: "";
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+      }
+      .ivu-table-header table {
+        /*background:@titleColor;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;*/
+        background: url("../../assets/images/common/tableHeader2.png") no-repeat;
+        background-size: 100% 99%;
+        line-height: 60px;
+        font-size: 16px;
+      }
+      .ivu-table-row:hover {
+        td .ivu-table-cell {
+          color: @treeIconColor;
+        }
+      }
+      td,
+      th {
+        border: 0 none;
+        font-weight: 400;
+        background: none;
+        .ivu-table-cell {
+          padding-left: 5px;
+          padding-right: 5px;
+          white-space: nowrap;
+        }
+      }
+      th {
+        font-size: 18px;
+        .ivu-table-cell {
+          color: @fontColorTitle;
+        }
+      }
+      td {
+        line-height: 30px;
+        font-size: 15px;
+        border-bottom: 1px solid #1a2f5f;
+        .ivu-table-cell {
+          color: @fontColorTitle;
+        }
+      }
+      .ivu-table-row:nth-child(odd) td {
+        background: @opacityBg;
+      }
+      .ivu-table-row:nth-child(even) td {
+        //background: @mainBgColor;
+      }
+    }
+  }
+
+  /*分页样式*/
+  .tablePage {
+    padding-top: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    .ivu-page {
+      .ivu-page-total {
+        font: 14px/14px Microsoft YaHei;
+        color: rgba(255, 255, 255, 1);
+      }
+      .ivu-page-options-elevator {
+        color: rgba(255, 255, 255, 1);
+        input {
+          background: transparent;
+          box-shadow: inset 0 0 8px #316e97;
+          border: 1px solid #316e97;
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+      .ivu-page-next,
+      .ivu-page-prev,
+      .ivu-page-item {
+        background-color: rgba(0, 0, 0, 0);
+        border: 0 none;
+        a {
+          color: #fff;
+        }
+      }
+      .ivu-page-disabled {
+        a {
+          color: #505050;
+        }
+      }
+      .ivu-page-item-active {
+        a {
+          color: #2d8cf0;
+        }
+      }
+      .ivu-page-options {
+        .ivu-select-single .ivu-select-selection {
+          height: auto;
+          width: auto;
+          color: rgba(255, 255, 255, 1);
+          border-radius: 4px;
+        }
+        .ivu-select {
+          width: 100%;
+        }
+        .ivu-select-selected-value {
+          line-height: 32px !important;
+        }
+      }
+    }
+  }
+
+  /*表单样式*/
+  .searchTitleInput2 {
+    width: 100%;
+    height: 105px;
+    overflow: auto;
+    margin: 15px 0;
+  }
+  .searchTitleInput {
+    width: 100%;
+    height: 50px;
+    overflow: auto;
+    margin: 15px 0;
+    padding-right: 10px;
+  }
+  .ivu-form-item {
+    display: inline-block;
+  }
+  .ivu-form .ivu-form-item-label {
+    color: rgba(255, 255, 255, 1);
+    font: 15px/16px Microsoft YaHei;
+  }
+  .searchItemText {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+  }
+  .formCon {
+    width: 429px;
+    background: rgba(42, 66, 115, 0);
+    border: 1px solid rgba(93, 166, 222, 1);
+  }
+  .ivu-date-picker-rel .ivu-input {
+    margin-bottom: 1px;
+    height: 34px;
+  }
+  .ivu-select {
+    width: 250px;
+  }
+  .searchItemInput,
+  .ivu-select-single .ivu-select-selection {
+    height: 40px;
+    width: 250px;
+    background: transparent;
+    box-shadow: inset 0 0 8px #316e97;
+    border: 1px solid #316e97;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    padding-left: 7px;
+    border-radius: 0;
+    .ivu-select-placeholder,
+    .ivu-select-selected-value {
+      line-height: 40px;
+    }
+  }
+  .ivu-input {
+    height: 40px;
+    width: 250px;
+    background: transparent;
+    -webkit-box-shadow: inset 0 0 8px #316e97;
+    box-shadow: inset 0 0 8px #316e97;
+    border: 1px solid #316e97;
+    border-radius: 0;
+    color: #fff;
+  }
+  .ivu-date-picker {
+    .ivu-select-dropdown {
+    }
+    .ivu-input-prefix i,
+    .ivu-input-suffix i {
+      line-height: 50px;
+      color: #fff;
+    }
+    .ivu-input {
+      width: 250px;
+      height: 40px;
+      background: transparent;
+      box-shadow: inset 0 0 8px #316e97;
+      border: 1px solid #316e97;
+      margin: 5px 0 5px 0;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 1);
+      border-radius: 0;
+    }
+    .ivu-date-picker-header-label {
+      color: #fff;
+    }
+    .ivu-date-picker-cells-cell {
+      color: #fff;
+      &:hover em {
+        background: #3797ff;
+      }
+    }
+    .ivu-date-picker-cells-cell-disabled {
+      background: transparent;
+      &:hover {
+        background: transparent;
+      }
+    }
+    .ivu-date-picker-cells-cell-prev-month em,
+    .ivu-date-picker-cells-cell-next-month em {
+      color: #8c8989;
+    }
+    .ivu-date-picker-cells-cell-range:before {
+      background: #3797ff;
+    }
+  }
+  #app *::-webkit-scrollbar-thumb {
+    border: 0;
+    border-radius: 0;
+  }
+  .ivu-picker-panel-body {
+    color: #17233d;
+  }
+  .ivu-input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  input::-webkit-input-placeholder {
+    color: #c5c8ce;
+  }
+
+  .drop-down-class {
+    background-color: #111a2d;
+  }
+  .ivu-upload {
+    > span {
+      display: inline-block;
+      width: 350px;
+      height: 40px;
+      border: 1px solid #0a458b;
+      border-radius: 4px 0 0 4px;
+      border-right: 0 none;
+    }
+  }
+
+  .ivu-select-dropdown.ivu-dropdown-transfer {
+    max-height: 400px;
+  }
+  .border .ivu-row {
+    margin: 12px;
+  }
+
+  .ivu-input[disabled],
+  .ivu-input[disabled]:hover {
+    border: 1px solid #2e5169 !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+  .ivu-transfer {
+    width: 540px;
+    .ivu-btn-primary {
+      width: 36px;
+      height: 36px;
+    }
+    .ivu-transfer-list {
+      width: 220px;
+      height: 250px;
+      .ivu-transfer-list-header {
+        height: 40px;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 0 0 4px 4px;
+        .ivu-checkbox-inner {
+          background-color: rgba(0, 0, 0, 0);
+          border: 1px solid rgba(0, 122, 255, 1);
+          border-radius: 4px;
+          width: 20px;
+          height: 20px;
+          &:after {
+            width: 6px;
+            height: 12px;
+            left: 6px;
+          }
+        }
+        .ivu-transfer-list-header-title,
+        .ivu-transfer-list-header-count {
+          color: rgba(255, 255, 255, 1);
+          font: 16px/24px Source Han Sans SC;
+        }
+      }
+      .ivu-transfer-list-body {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 4px 4px;
+        .ivu-transfer-list-body-search-wrapper {
+          top: 20px;
+          left: 19px;
+          width: 180px;
+          height: 40px;
+          padding: 0;
+          .ivu-icon {
+            line-height: 42px;
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            border-left: 1px solid rgba(0, 122, 255, 0.3);
+          }
+        }
+        .ivu-input {
+          width: 180px;
+          height: 40px;
+        }
+        .ivu-transfer-list-content {
+          margin: 30px 10px 10px 10px;
+          height: 143px;
+          > .ivu-transfer-list-content-item > span {
+            color: rgba(255, 255, 255, 1);
+            font: 14px/14px Source Han Sans SC;
+          }
+          .ivu-checkbox-inner {
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid rgba(0, 122, 255, 1);
+            border-radius: 4px;
+            width: 16px;
+            height: 16px;
+            &:after {
+              width: 4px;
+              height: 8px;
+              left: 5px;
+              top: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ivu-input-wrapper-small .ivu-input-icon {
+    line-height: 32px;
+  }
+
+  /*按钮样式*/
+  .ivu-btn-primary {
+    //background-color: #007AFF;
+    //border-color: #007AFF;
+  }
+  .ivu-btn-primary[disabled],
+  .ivu-btn[disabled]:hover {
+    background: #111a2d;
+    border: 1px solid #0a4081;
+  }
+  //.ivu-btn-primary:hover {
+  //  background-color: #2d8cf0;
+  //  border-color: #2d8cf0;
+  //}
+  .ivu-transfer-list-content-item:hover {
+    background: 0 none;
+  }
+
+  .ivu-btn-error {
+    background-color: #e82727;
+    border-color: #e82727;
+  }
+
+  .ivu-btn-error:hover {
+    color: #ffffff;
+    background-color: #ed4014;
+    border-color: #ed4014;
+  }
+  /*提示框样式*/
+  .ivu-tooltip {
+    .ivu-tooltip-inner {
+      max-width: unset;
+    }
+  }
+
+  /*树样式*/
+  .ivu-tree-title,
+  .ivu-tree ul {
+    color: @fontColorNormal;
+    font: 14px/24px SourceHanSansSC-Bold;
+  }
+
+  .ivu-tree ul li {
+    cursor: pointer;
+    margin: 8px 0;
+  }
+
+  .ivu-tree-title:hover,
+  .ivu-tree-title-selected,
+  .ivu-tree-title-selected:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: @fontColor;
+  }
+
+  .ivu-tree-arrow-open i,
+  .ivu-tree-arrow i {
+    color: @treeIconColor;
+    line-height: 24px;
+  }
+  /*树滚动*/
+  .dataDictionary .ivu-col {
+    overflow-y: auto;
+    overflow-x: hidden;
+    li:hover {
+      cursor: pointer;
+    }
+  }
+  /*滚动条样式*/
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(6, 129, 255, 1);
+  }
+  *::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+.ivu-select-dropdown {
+  background: #0c1a31 !important;
+  box-shadow: inset 0 0 8px #316e97;
+  border: 1px solid #316e97;
+}
+.ivu-select-dropdown .ivu-select-dropdown-list {
+  .ivu-select-item {
+    color: rgba(255, 255, 255, 0.85);
+    &:hover {
+      color: #2d8cf0;
+      background: transparent;
+    }
+  }
+  .ivu-select-item-focus,
+  .ivu-select-item-selected {
+    color: #2d8cf0;
+    background: transparent;
+  }
+}
+// 每个页面大标题
+.statisticsTitle {
+  height: 78px;
+  color: rgba(53, 255, 250, 1);
+  font: bold 30px/74px Microsoft YaHei;
+  padding-left: 40px;
+  border-bottom: 2px solid rgba(0, 111, 233, 0.48);
+  background: rgba(93, 166, 222, 0.12);
+}

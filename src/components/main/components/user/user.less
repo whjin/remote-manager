@@ -1,0 +1,65 @@
+.user {
+  &-avator-dropdown {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 0;
+    position: absolute;
+    right: 132px;
+
+    .ivu-badge-dot {
+      top: 16px;
+      right: 0;
+    }
+
+    .ivu-badge {
+      color: rgba(53, 255, 250, 1);
+    }
+  }
+}
+
+.user-avator-dropdown {
+  box-sizing: border-box;
+  .ivu-dropdown {
+    position: relative;
+    top: 10px;
+  }
+
+  .ivu-select-dropdown {
+    border: 1px solid #0357b4;
+    border-radius: unset;
+    background: #010a1b;
+    width: 160px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 7px 0 rgb(0, 122, 255) inset;
+
+    .ivu-dropdown-item {
+      height: 60px;
+      color: #fff;
+      font: 0.938vw/2.125vw Source Han Sans SC;
+      text-align: center;
+
+      > i {
+        margin: 0 0.121vw;
+      }
+
+      &:hover {
+        background: transparent;
+        color: rgba(53, 255, 250, 1);
+      }
+    }
+  }
+
+  .username {
+    font-size: 17px;
+    overflow: hidden;
+    display: inline-block;
+    width: 80px;
+    white-space: nowrap;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+  }
+}

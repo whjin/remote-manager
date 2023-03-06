@@ -1,0 +1,100 @@
+@import "../../index.less";
+
+#app {
+  .login {
+    background: @backgroundImg;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    &-con {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .ivu-card {
+        background: url("../../assets/images/login/loginBox.png") no-repeat;
+        width: 660px;
+        height: 518px;
+        background-size: 100% 80%;
+        .ivu-card-head {
+          border-bottom: 0 none;
+          padding: 0px;
+          text-align: center;
+          p {
+            height: 84px;
+            span {
+              font-size: 30px;
+              font-weight: 600;
+              letter-spacing: 6px;
+              color: @fontColor;
+              line-height: 108px;
+            }
+          }
+        }
+        .ivu-card-body {
+          padding: 45px 85px;
+          .ivu-form-item {
+            margin: 24px 0;
+            .ivu-form-item-content {
+              width: 100%;
+            }
+            .ivu-input-group-prepend {
+              background: @opacityBg;
+              border: 0 none;
+            }
+            .ivu-icon {
+              font-size: 39px !important;
+              font-weight: bold;
+              color: @fontColor;
+            }
+            input {
+              padding-left: 16px;
+              width: 398px;
+              height: 46px;
+              box-shadow: 0 0 10 0 @mainBgColor;
+              border-radius: 4px;
+              border: 0;
+              outline: 0;
+              background-color: @fontColor;
+              line-height: 46px;
+              font-size: 18px;
+              cursor: text;
+              color: @fontColor2;
+            }
+            .border {
+              margin-top: 110px;
+              button {
+                background: 0 none;
+                border: 0 none;
+                width: 470px;
+                height: 80px;
+                color: @fontColor;
+                font-size: 24px;
+                font-weight: bold;
+                letter-spacing: 22px;
+                span {
+                  position: relative;
+                  left: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .license {
+      font-size: 16px;
+      color: #fff;
+      opacity: 0.5;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      cursor: pointer;
+    }
+    .license:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  }
+}

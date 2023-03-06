@@ -1,0 +1,106 @@
+@import "../../index.less";
+
+.ivu-spin-fix {
+  background-color: transparent !important;
+}
+
+.bgMain {
+  background: url(../../assets/images/common/background.png) no-repeat !important;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100% !important;
+
+  .header-con {
+    padding-left: 35px;
+    background-color: #010a1b;
+    border-bottom: 2px solid rgba(0, 111, 233, 0.48);
+    box-sizing: border-box;
+    width: 100%;
+    height: 99px;
+    padding-right: 166px;
+    > img {
+      display: inline-block;
+      position: relative;
+      top: 16px;
+      margin-right: 70px;
+    }
+
+    .ivu-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      margin: 0 10px;
+    }
+
+    .user-avator-dropdown {
+      .ivu-icon {
+        font-size: 36px !important;
+        position: relative;
+        top: 2px;
+        color: #fff;
+      }
+    }
+
+    .nowDate {
+      width: 134px;
+      position: absolute;
+      right: 335px;
+      top: 26px;
+      overflow: hidden;
+
+      div {
+        color: rgba(255, 255, 255, 1);
+        font: bold 16px/28px Source Han Sans SC;
+        letter-spacing: 1px;
+
+        &:nth-child(1) {
+          span:nth-child(2) {
+            margin-left: 5px;
+            color: #3797ff;
+          }
+        }
+
+        &:nth-child(2) {
+          font: normal 22px/22px Source Han Sans SC;
+        }
+      }
+    }
+
+    .logout {
+      width: 108px;
+      position: absolute;
+      right: 0;
+      top: 26px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  .bottom-con {
+    display: inline-block;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 1);
+    font: 24px/104px Microsoft YaHei;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      width: 140px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .router-link-active {
+      font-size: 30px;
+      font-weight: bold;
+      background: linear-gradient(
+        0deg,
+        rgba(119, 255, 255, 1) 0%,
+        rgba(0, 122, 255, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

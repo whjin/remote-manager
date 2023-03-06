@@ -1,2 +1,3 @@
-# remote-manager
-remote manager
+# meeting-manage
+
+management of meetings

@@ -1,0 +1,193 @@
+@import './common.less';
+/*普通弹窗样式*/
+.v-transfer-dom{
+  #app;
+  .tablePage{
+    right:40px;
+    bottom:0;
+  }
+  //查看详情样式
+  .objInfoModal{
+    line-height: 28px;font-weight: normal;height:150px;
+    >.unToolTip{
+      text-overflow: ellipsis;
+      overflow:hidden;
+      white-space: nowrap;
+      display:inline-block;
+      color: rgba(255, 255, 255, 1);
+      vertical-align: top;
+      height: 37px;
+      font-size: 16px;
+    }
+    >div{
+      width: 50%;
+      margin-bottom: 0.729vw;
+      .ivu-tooltip-rel{
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 1);
+        font-size: 16px;
+      }
+    }
+  }
+  //普通弹窗
+  .ivu-modal-content{
+    background: url("../../assets/images/common/background.png") no-repeat;
+    border-radius: 0;
+    .ivu-modal-header{
+      padding: 20px;
+      border-bottom:1px solid rgba(0,122,255,1) ;
+      p{
+        height:22px;
+        i,span{
+          box-sizing:border-box;
+          width:100%;
+          height:60px;
+          font:bold 20px/22px Adobe Heiti Std R;
+          color: #35FFFA;
+        }
+      }
+    }
+    .ivu-modal-close .ivu-icon-ios-close{
+      font-size: 42px;
+      top: 5px;
+      color: #ffffff;
+      left: -3px;
+      &:hover{
+        color: rgba(255,255,255,1);
+      }
+    }
+    .ivu-modal-body{
+      font:bold 14px/14px ArialMT;
+      padding: 40px 30px 0 30px;
+      color: rgba(255,255,255,1);
+      position: relative;
+      .ivu-input {
+        height: 40px;
+        width: 200px;
+        background: transparent;
+        box-shadow: inset 0 0 8px #316E97;
+        border: 1px solid #316E97;
+        border-radius: 0;
+        color:#fff;
+      }
+      .ivu-date-picker{
+        .ivu-select-dropdown{
+
+        }
+        .ivu-input-prefix i, .ivu-input-suffix i{
+          line-height: 40px;
+          color:#fff;
+        }
+        .ivu-input {
+          height: 40px;
+          background: transparent;
+          box-shadow: inset 0 0 8px #316E97;
+          border: 1px solid #316E97;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 1);
+          border-radius:0;
+          margin:0;
+          width: 200px;
+        }
+        .ivu-date-picker-header-label{
+          color:#fff;
+        }
+        .ivu-date-picker-cells-cell{
+          color:#fff;
+          &:hover em{
+            background: #3797FF;
+          }
+        }
+        .ivu-date-picker-cells-cell-disabled{
+          background: transparent;
+          &:hover{
+            background: transparent;
+          }
+        }
+        .ivu-date-picker-cells-cell-prev-month em, .ivu-date-picker-cells-cell-next-month em{
+          color: #8c8989;
+        }
+        .ivu-date-picker-cells-cell-range:before{
+          background: #3797FF;
+        }
+      }
+      .ivu-table-header{
+        table{
+          width: 100% !important;
+        }
+      }
+      .ivu-select{
+        width: 200px;
+        .ivu-select-selection {
+          height: 40px;
+          width: 200px;
+          background: transparent;
+          box-shadow: inset 0 0 8px #316E97;
+          border: 1px solid #316E97;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 1);
+          padding-left:7px;
+          border-radius: 0;
+          .ivu-select-placeholder,.ivu-select-selected-value{
+            line-height: 40px;
+          }
+          .ivu-select-input{
+            height:40px;
+            padding:0;
+            color:#fff;
+          }
+        }
+        .ivu-select-dropdown{
+          width: 200px!important;
+          min-width: unset!important;
+        }
+      }
+      // 弹窗小标题
+      .v-transfer-title{
+        color:rgb(53, 255, 250);
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 22px;
+        display: inline-block;
+      }
+    }
+    .ivu-modal-footer{
+      border-top:none;
+      text-align:right;
+      padding:40px 35px;
+      .ivu-btn-primary{
+        background: url("../../assets/images/common/searchButton.png") no-repeat;
+        background-size: 100% 100%;
+        border: 0 none;
+        width: 100px;
+        height: 50px;
+        font-size: 14px;
+        border-radius: 0;
+        color: #fff;
+      }
+    }
+  }
+  //弹窗按钮样式
+  .ivu-btn-primary{
+    //width:100px;
+    //height:40px;
+    font:16px/16px Source Han Sans SC!important;
+    border-radius:4px!important;
+    margin:0 5px;
+  }
+  //.cancelBtn{
+  //  border:1px solid rgba(0,122,255,1)!important;
+  //  background:rgba(0,122,255,0.2)!important;
+  //  color: rgba(255,255,255,0.85) !important;
+  //}
+  //.confirmBtn{
+  //  background:rgba(0,122,255,1) !important;
+  //  color: rgba(255,255,255,0.85) !important;
+  //}
+  .cameraBox, img {
+    border: 0 none;
+  }
+}
